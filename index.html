@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Клиент REST Countries API на чистом JavaScript — fetch, async/await, Promise.all.">
+    <title>Покемоны — Анарбаева Акерке</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>🐾 Покемоны</h1>
+        <p>Лаба 6 — async, Promise, Fetch, REST</p>
+    </header>
+
+    <main class="container">
+
+        <form id="search-form" class="search-form">
+            <label for="search" class="sr-only">Поиск страны</label>
+            <input type="text" id="search" placeholder="Например: pikachu, bulbasaur, charmander..." autocomplete="off">
+            <button type="submit" class="btn">Найти</button>
+            <button type="button" id="compare-btn" class="btn btn--alt">⚖️ Сравнить первые 2</button>
+        </form>
+
+        <div id="loading" class="loading" hidden>
+            <div class="spinner"></div>
+            <p>Загрузка...</p>
+        </div>
+
+        <p id="error" class="error" hidden></p>
+
+        <section id="detail" class="detail" hidden></section>
+
+        <section id="compare-result" class="compare"></section>
+
+        <section id="country-list" class="country-list"></section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Акерке Анарбаева — IT1-2310</p>
+    </footer>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+
+</html>
